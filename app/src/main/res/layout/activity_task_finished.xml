@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TaskFinished">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tablayout"
+            android:layout_below="@+id/toolbar"
+            android:background="?attr/colorPrimary"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabTextColor="@color/silver"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/orange" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:fitsSystemWindows="false"
+        tools:context=".MainActivity"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="RedundantNamespace">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar"
+            android:orientation="vertical">
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewPager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            </androidx.viewpager.widget.ViewPager>
+        </LinearLayout>
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation"
+            android:layout_width="100dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            style="style/design_navigation_icon_size"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/dark_blue"
+            app:itemBackground="@drawable/drawarmenu_background"
+            app:itemIconTint="@color/white"
+            app:menu="@menu/menu"
+            />
+
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

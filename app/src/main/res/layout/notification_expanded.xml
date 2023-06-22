@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/expand"
+    android:background="@color/white"
+    android:layout_height="126dp">
+
+    <ImageView
+        android:layout_margin="8dp"
+        android:id="@+id/cImage"
+        android:src="@drawable/reminder_icon"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cImage"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/Notifytitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task Name"
+            android:maxLines="1"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/Notifydesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Task Description"
+            android:maxLines="2"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/ecomplete"
+            android:text="Complete"
+            android:background="@drawable/btn_background"
+            android:drawableLeft="@drawable/ic_check_circle_black_24dp"
+            android:layout_width="wrap_content"
+            android:paddingRight="5dp"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            />
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/epending"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="Pending"
+            android:paddingRight="5dp"
+            android:background="@drawable/btn_background"
+            android:drawableLeft="@drawable/ic_schedule_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            />
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/ecencle"
+            android:text="Cancel"
+            android:paddingRight="5dp"
+            android:background="@drawable/btn_background"
+            android:drawableLeft="@drawable/ic_cancel_black_24dp"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/textview"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_keyboard_backspace_black_24dp"
+                android:background="@drawable/textview"/>
+            <TextView
+                android:id="@+id/tasklistheader"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New List"
+                android:gravity="center"
+                android:layout_gravity="center"
+                style="@style/TextAppearance.AppCompat.Title"/>
+        </LinearLayout>
+
+        <EditText
+            android:paddingLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text"
+            android:hint="Enter Name"
+            android:id="@+id/addlist_name"/>
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:text="Private mode"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/privatemodeCheked"/>
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/submitbuton"
+            android:text="Submit"
+            android:textStyle="normal"
+            android:textColor="@color/white"
+            android:onClick="submitList"/>
+    </LinearLayout>
+
+</RelativeLayout>

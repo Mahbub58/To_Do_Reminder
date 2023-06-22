@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="to_do_reminder.EspritSoft">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".Notification.AppNotify"
+        android:allowBackup="true"
+        android:icon="@drawable/reminder_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".service.Task_scheduler"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".activity.ErrorSolve" />
+        <activity android:name=".activity.pandingDataUpdate" />
+        <activity android:name=".activity.CancledTask" />
+        <activity android:name=".activity.DeletedTask" />
+        <activity android:name=".activity.setings" />
+        <activity android:name=".activity.RenameTask" />
+        <activity android:name=".activity.About" />
+        <activity android:name=".activity.TaskFinished" />
+        <activity android:name=".activity.AddTaskList" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.NewTask" />
+
+        <service
+            android:name=".service.manageData"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".Notification.NotificationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".Notification.NotificationServicePrivate"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name=".service.CheckTotalTask"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.Task_scheduler"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".service.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="to_do_reminder.EspritSoft" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+
+        </receiver>
+        <receiver android:name=".Notification.add" />
+        <receiver android:name=".Notification.cancle" />
+        <receiver android:name=".Notification.complete" />
+        <receiver android:name=".Notification.panding" />
+
+        <activity android:name=".activity.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

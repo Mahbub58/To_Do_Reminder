@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:id="@+id/back_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_margin="8dp"
+    android:src="@drawable/ic_keyboard_backspace_black_24dp"
+    android:background="@drawable/button_background_transparent"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/white"
+    android:id="@+id/clops">
+
+
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:id="@+id/cImage"
+        android:src="@drawable/reminder_icon"/>
+    <LinearLayout
+        android:layout_toLeftOf="@+id/btnline"
+        android:layout_marginLeft="6dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/cImage"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Private Task"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Access deny"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/btnline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/ccomplete"
+            android:src="@drawable/ic_check_circle_black_24dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/btn_background"
+            />
+        <ImageButton
+            android:id="@+id/ccncle"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_background"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

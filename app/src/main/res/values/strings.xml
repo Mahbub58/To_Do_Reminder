@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">To Do Reminder</string>
+    <string name="home">Task List</string>
+    <string name="menu">Menu</string>
+
+    <string name="license">Open Surce License</string>
+    <string name="text1">This software is provided by EspritSoft and any express or implied warranties, including, but not limited
+    to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed.In no event shall
+    the authors or contributors be liable for any direct,indirect,incidental,special,exemplary,or consequential damages
+    (including but not limited to, procurement of substitute goods or services;loss of use,data,or profits;or business interruption)however
+    caused and on any theory of liability,whether in contract,strict liability,or tort(including negligence or otherwise)
+    arising in any way out of the use of this software,even if advised of the possibility of such damage.\n\nOpen source libraries:\n\n
+        1.Expandable layout view its under license Apache2.\n2.Expandable text view its under license Apache2
+     </string>
+    <string name="contact">Contact Us</string>
+    <string name="mail">Email: EspritSoft.com@gmail.com</string>
+    <string name="gradila_licens">Version</string>
+    <string name="text2">App Version 10.01.02</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="text3">This is Privacy Policy illustrates what personal information you may share with us,
+        when installing and using this application("Application").It also describes how we receive,collect,process and use such
+        information. We will diligently respect your fundamental legal rights to data protection and privacy.\n\n
+        Collection of Information\nWe will collect anonymised analytics of your activity in the Application using Firebase Console
+        its provide by Google.We reserve the right to use such information for statistic.\n\nWe use third party advertising
+        SDKs(AdMob)as part of the Application to show ads.These SDK will get access to your approximate location (city,country).These providers
+        guarantee that no personal data will be collected.All anonymous data will be used to show ads appropriate to your country
+    and language.\n\nSecurity\nIn accordance with applicable legal regulations,we undertake any resonable measures to ensure data security,although
+   we are unable to assure that your personal information will not be subject to unauthorized access,unauthorized use or abuse.
+    \nIn order to insure  data security,we will in consideration of appropriate technical possibilities,ensure that only
+    authorized personal receiver access to the data for legally permissible purposes,protect stored or transmitted data against accidental
+    or unlawful destruction,loos or unintended changes and unauthorized or unlawful storage or processing,unauthorized access or unauthorized or unlawful transmission,
+    and comply with all applicable data protection provisions.\n\nChange of Privacy Policy\nWe are allowed to change this Privacy Policy at any time,
+        and we advise you to review the Privacy Policy from time to time. In case of major changes in the content of this Privacy Policy,you will be
+        informed about the change  and asked to agree hereto\n\nGoverning law\nThis Privacy policy shall be governed by and construed in accordance with law.In the event
+    that any of the provisions of the Privacy Policy should become infective,invalid or unenforceable,this shall not affect the effectiveness,validity and enforceability
+    of the remaining provisions.In the event of the ineffectiveness,invalidity or unenforceability of any of these provisions you agree
+    that we may substitute such by any efective,valid and enforceable provision which is, in its legal result,as close as possible
+    to the ineffective,invalid or unenforceable provision.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="batteryAccess">If app dose not work properly and not notify you on timely please
+    flow this steps.\n \n 1 Find To Do Reminder \n\t(Select All app)\n \n2 Click and select Do not optimize \n\t (Turn off optimize)
+    \n\n 3 Back to To Do Reminder app and use it.\n \t   (Thank You)</string>
+</resources>

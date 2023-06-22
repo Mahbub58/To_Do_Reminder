@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/taskList"
+            android:icon="@drawable/ic_tasklist24px"
+            android:title="" />
+        <item
+            android:title=""
+            android:id="@+id/taskFnished"
+            android:icon="@drawable/ic_tasklistcomplete24px"/>
+        <item
+            android:title=""
+            android:id="@+id/taskcencle"
+            android:icon="@drawable/ic_tasklistcencel24dp"/>
+        <item
+            android:id="@+id/delete"
+            android:icon="@drawable/ic_tasklistdeleted24px"
+            android:title="" />
+
+    </group>
+
+    <item android:title="ABOUT">
+        <menu>
+            <item
+                android:title=""
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_seeting"
+                />
+
+            <item
+                android:title=""
+                android:icon="@drawable/ic_info"
+                android:id="@+id/About"
+                />
+
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewTask">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/toolbar"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+       android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="start"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:textColor="@color/dark_blue"
+        android:text="What is to be done?"
+        style="@style/TextAppearance.AppCompat.Title"/>
+    <EditText
+        android:id="@+id/etuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginLeft="4dp"
+       style="@style/TextAppearance.AppCompat.Title"
+        android:hint="Enter Task Title"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/etpass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:maxLines="3"
+        android:layout_marginLeft="4dp"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:hint="Enter Task Description(Optional)"
+        android:inputType="none" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue"
+            android:text="Due date"
+            android:textStyle="bold|italic"
+            style="@style/TextAppearance.AppCompat.Title"/>
+      <LinearLayout
+          android:layout_marginLeft="4dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+          <EditText
+              android:drawableRight="@drawable/ic_date_range_black_24dp"
+              android:id="@+id/datepicker"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+               android:hint=" Date Not Set  "
+              android:maxLines="1"
+              android:windowSoftInputMode="stateAlwaysHidden"
+              android:inputType="text"
+              style="@style/TextAppearance.AppCompat.Title"/>
+
+      </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/timepicker"
+                android:drawableRight="@drawable/ic_schedule_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" Time Not Set  "
+                android:inputType="text"
+                android:maxLines="1"
+                android:windowSoftInputMode="stateAlwaysHidden"
+                style="@style/TextAppearance.AppCompat.Title"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue"
+            android:text="Set List"
+            android:textStyle="bold|italic"
+            style="@style/TextAppearance.AppCompat.Title"/>
+        <LinearLayout
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/listtype"
+                android:layout_marginLeft="10dp"/>
+            <ImageButton
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_playlist_add_black_24dp"
+                android:background="@drawable/button_background_transparent"
+                android:text="Add"
+                android:onClick="AddTaskList"/>
+        </LinearLayout>
+        <Button
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/buSave"
+            android:textColor="@color/white"
+            android:background="@drawable/button_black_desable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"/>
+    </LinearLayout>
+</ScrollView>
+
+    <!--expandable lyout -->
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/expand_button"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:windowBackground"
+            android:elevation="6dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Tap to toggle expansion" />
+        <net.cachapa.expandablelayout.ExpandableLayout
+            android:visibility="invisible"
+            android:id="@+id/expandable_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#fff"
+            app:el_duration="1000"
+            app:el_expanded="true"
+            app:el_parallax="0.5">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Repeat"
+                       android:layout_alignParentLeft="true"
+                       style="@style/TextAppearance.AppCompat.Title"
+                       android:id="@+id/repettyp"/>
+                   <TextView
+                       style="@style/TextAppearance.AppCompat.Title"
+                       android:id="@+id/repetstatus"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:text="OFF"/>
+               </RelativeLayout>
+               <Spinner
+                   android:id="@+id/ntfytyp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Notification "
+                   style="@style/TextAppearance.AppCompat.Title"/>
+               <Spinner
+                   android:id="@+id/ntfystate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Notification "
+                   style="@style/TextAppearance.AppCompat.Title"/>
+           </LinearLayout>
+
+        </net.cachapa.expandablelayout.ExpandableLayout>
+
+
+<include layout="@layout/toolbar"/>
+</RelativeLayout>

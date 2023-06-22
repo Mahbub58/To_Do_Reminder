@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+    <ImageView
+        android:layout_margin="8dp"
+        android:id="@+id/cImage"
+        android:src="@drawable/reminder_icon"
+        style="@style/TextAppearance.Compat.Notification.Title"
+        android:layout_width="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="60dp"
+        android:text=""/>
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="6dp"
+        android:layout_below="@id/cImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Private Task"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:gravity="center_horizontal"
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Access deny"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/buttonlyout"
+        android:layout_below="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/pass"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/edittext_password_fild"
+            android:hint="Enter your Password"
+            android:inputType="textWebPassword" />
+        <Button
+            android:id="@+id/chckPassword"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/submitbuton"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/li"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ok"/>
+        <TextView
+            android:id="@+id/remaindagain"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_schedule_black_24dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/green"
+            android:text="Remind me after 10 seconds"/>
+    </LinearLayout>
+</RelativeLayout>

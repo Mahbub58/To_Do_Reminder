@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:id="@+id/clops">
+
+
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:id="@+id/cImage"
+        android:src="@drawable/reminder_icon"/>
+<RelativeLayout
+    android:layout_toRightOf="@id/cImage"
+    android:layout_marginLeft="5dp"
+    android:layout_centerVertical="true"
+    android:gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        style="@style/TextAppearance.AppCompat.Headline"
+       android:id="@+id/taskNumber"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:text="Task Today"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black_grey"
+        android:text="Upcoming Task: " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/upcomingTask"
+            android:textColor="@color/black_grey"
+            android:text="No Task Found"/>
+    </LinearLayout>
+</RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/add"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="40dp"
+        android:padding="8dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_add_alert_black_24dp"
+        android:background="@drawable/button_background_transparent"/>
+</RelativeLayout>
